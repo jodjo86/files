@@ -1,0 +1,11 @@
+#mermaid-js.github.io/
+graph LR
+    A{MinION} --> B(fastq<br />1000 Mo)
+    B --> F[FastQ Screen<br />Retrait genome hôte]
+    F -->|lent|E(fastq filtré<br />100 Mo)
+    B --> C[SeqTk<br />Retrait qualité]
+    E --> C
+    C -->|rapide|D(fasta<br />300 Mo)
+    C -->|rapide|G(fasta filtré<br />30 Mo)
+    style F fill:#FFC300
+    style C fill:#FFC300
